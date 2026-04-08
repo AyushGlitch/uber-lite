@@ -2,7 +2,7 @@ package com.uber.lite.riderservice.mapper;
 
 import com.uber.lite.riderservice.dto.RiderRequestDTO;
 import com.uber.lite.riderservice.dto.RiderResponseDTO;
-import com.uber.lite.riderservice.modal.Rider;
+import com.uber.lite.riderservice.model.Rider;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;

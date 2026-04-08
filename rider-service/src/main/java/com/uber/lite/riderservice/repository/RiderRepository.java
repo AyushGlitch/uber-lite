@@ -1,6 +1,6 @@
 package com.uber.lite.riderservice.repository;
 
-import com.uber.lite.riderservice.modal.Rider;
+import com.uber.lite.riderservice.model.Rider;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

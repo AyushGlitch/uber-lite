@@ -3,7 +3,7 @@ package com.uber.lite.riderservice.service;
 import com.uber.lite.riderservice.dto.RiderRequestDTO;
 import com.uber.lite.riderservice.dto.RiderResponseDTO;
 import com.uber.lite.riderservice.mapper.RiderMapper;
-import com.uber.lite.riderservice.modal.Rider;
+import com.uber.lite.riderservice.model.Rider;
 import com.uber.lite.riderservice.repository.RiderRepository;
 import org.springframework.stereotype.Service;
 

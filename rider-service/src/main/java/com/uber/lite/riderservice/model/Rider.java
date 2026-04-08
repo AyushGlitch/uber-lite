@@ -1,4 +1,4 @@
-package com.uber.lite.riderservice.modal;
+package com.uber.lite.riderservice.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

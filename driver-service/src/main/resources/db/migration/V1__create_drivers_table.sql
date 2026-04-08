@@ -1,0 +1,8 @@
+CREATE TABLE drivers (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    license_plate VARCHAR(255) NOT NULL UNIQUE,
+    vehicle_type VARCHAR(255) NOT NULL,
+    status VARCHAR(50) NOT NULL DEFAULT 'OFFLINE',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
