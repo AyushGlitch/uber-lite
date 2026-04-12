@@ -8,6 +8,6 @@ public record DriverResponseDTO(
         String name,
         String licensePlate,
         String vehicleType,
-        String Status,
+        String status,
         LocalDateTime createdAt
 ) {}
