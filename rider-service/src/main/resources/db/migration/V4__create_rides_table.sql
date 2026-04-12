@@ -1,0 +1,11 @@
+CREATE TABLE rides (
+    id UUID PRIMARY KEY,
+    rider_id UUID NOT NULL,
+    pickup_lat DOUBLE PRECISION NOT NULL,
+    pickup_lon DOUBLE PRECISION NOT NULL,
+    dropoff_lat DOUBLE PRECISION NOT NULL,
+    dropoff_lon DOUBLE PRECISION NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_rider FOREIGN KEY (rider_id) REFERENCES riders(id)
+)

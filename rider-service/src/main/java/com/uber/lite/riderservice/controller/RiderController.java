@@ -1,5 +1,6 @@
 package com.uber.lite.riderservice.controller;
 
+import com.uber.lite.common.request.RideRequestDTO;
 import com.uber.lite.riderservice.dto.RiderRequestDTO;
 import com.uber.lite.riderservice.dto.RiderResponseDTO;
 import com.uber.lite.riderservice.service.RiderService;
@@ -26,5 +27,11 @@ public class RiderController {
     public ResponseEntity<RiderResponseDTO> getRider(@PathVariable UUID id) {
         RiderResponseDTO rider = riderService.getRiderById(id);
         return ResponseEntity.ok().body(rider);
+    }
+
+    @PostMapping("/rides")
+    public ResponseEntity<Void> requestRide(@Valid @RequestBody RideRequestDTO dto) {
+        riderService.requestRide(dto);
+        return ResponseEntity.accepted().build();
     }
 }

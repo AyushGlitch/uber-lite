@@ -6,6 +6,7 @@ import java.util.UUID;
 
 
 public record RideRequestEventDTO(
+        @NotNull UUID rideId,
     @NotNull UUID riderId,
     @NotNull Double pickupLat,
     @NotNull Double pickupLon,
