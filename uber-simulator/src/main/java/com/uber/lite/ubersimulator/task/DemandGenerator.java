@@ -24,6 +24,10 @@ public class DemandGenerator {
             log.info("No drivers available, skipping demand generation.");
             return;
         }
+        if (store.getRiderIds().isEmpty()) {
+            log.info("No riders available, skipping demand generation.");
+            return;
+        }
 
         UUID riderId = store.getRiderIds().get(
                 new Random().nextInt(store.getRiderIds().size())
@@ -38,7 +42,7 @@ public class DemandGenerator {
         );
 
         webClient.post()
-                .uri("http://localhost:8081/v1/rides")
+                .uri("http://localhost:8081/v1/riders/rides")
                 .bodyValue(request)
                 .retrieve()
                 .toBodilessEntity()

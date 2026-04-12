@@ -32,6 +32,10 @@ public class SimulationRunner implements CommandLineRunner {
                     .retrieve()
                     .bodyToMono(RiderResponseDTO.class)
                     .block();
+
+            if (responseDTO != null) {
+                store.addRider(responseDTO.id());
+            }
         }
 
         for (int i= 0; i< 50; i++) {
