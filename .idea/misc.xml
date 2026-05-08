@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/location-service/pom.xml" />
         <option value="$PROJECT_DIR$/uber-simulator/pom.xml" />
         <option value="$PROJECT_DIR$/matching-service/pom.xml" />
+        <option value="$PROJECT_DIR$/trip-service/pom.xml" />
       </list>
     </option>
   </component>

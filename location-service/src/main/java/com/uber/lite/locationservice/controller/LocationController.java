@@ -1,5 +1,6 @@
 package com.uber.lite.locationservice.controller;
 
+import com.uber.lite.common.response.NearbyDriverResponseDTO;
 import com.uber.lite.locationservice.service.LocationService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,9 +19,9 @@ public class LocationController {
     }
 
     @GetMapping("/nearby")
-    public List<String> getNearbyDrivers(@RequestParam double lat,
-                                         @RequestParam double lon,
-                                         @RequestParam(defaultValue = "5") double radiusKm) {
+    public List<NearbyDriverResponseDTO> getNearbyDrivers(@RequestParam double lat,
+                                                          @RequestParam double lon,
+                                                          @RequestParam(defaultValue = "5") double radiusKm) {
         return locationService.findNearbyDrivers(lat, lon, radiusKm);
     }
 }

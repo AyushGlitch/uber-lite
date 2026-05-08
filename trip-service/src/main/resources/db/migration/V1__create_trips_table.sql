@@ -1,0 +1,9 @@
+CREATE TABLE trips (
+    id UUID PRIMARY KEY,
+    ride_id UUID NOT NULL UNIQUE,
+    rider_id UUID NOT NULL,
+    driver_id UUID,
+    status VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

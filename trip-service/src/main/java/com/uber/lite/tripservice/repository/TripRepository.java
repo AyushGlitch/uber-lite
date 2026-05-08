@@ -1,0 +1,11 @@
+package com.uber.lite.tripservice.repository;
+
+import com.uber.lite.tripservice.model.Trip;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface TripRepository extends JpaRepository<Trip, UUID> {
+    Optional<Trip> findByRideId(UUID rideId);
+}
