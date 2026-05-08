@@ -21,3 +21,7 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    topics:
+      rideRequests: ride-requests
+  outbox:
+    poll-delay-ms: 1000

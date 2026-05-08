@@ -1,0 +1,24 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: matching-service
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: matching-service-group
+      auto-offset-reset: earliest
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+clients:
+  location:
+    base-url: http://localhost:8083
+
+app:
+  kafka:
+    topics:
+      rideRequests: ride-requests
+      matchProposals: match-proposals
